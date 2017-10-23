@@ -1,26 +1,7 @@
-/*
-* QSInterface.h
-*
-*  Created on: May 1, 2014
-*  Last Updated on: March 30, 2015
-*/
-
-#ifndef QSINTERFACE_H_
-#define QSINTERFACE_H_
-
 #include <iostream>
 #include <string>
+#include "QS.h"
 using namespace std;
-
-/*
-* WARNING: You may not modify any part of this document, including its name
-*/
-
-class QSInterface
-{
-public:
-	QSInterface() {}
-	virtual ~QSInterface() {}
 
 	/*
 	* sortAll()
@@ -30,7 +11,10 @@ public:
 	*
 	* Does nothing if the array is empty.
 	*/
-	virtual void sortAll() = 0;
+	void QS::sortAll()
+	{
+		return;
+	}
 
 	/*
 	* medianOfThree()
@@ -57,7 +41,10 @@ public:
 	* @return
 	*		the index of the pivot (middle index); -1 if provided with invalid input
 	*/
-	virtual int medianOfThree(int left, int right) = 0;
+	int QS::medianOfThree(int left, int right)
+	{
+		return 0;
+	}
 
 	/*
 	* Partitions a subarray around a pivot value selected according to
@@ -82,7 +69,10 @@ public:
 	*		the pivot's ending index after the partition completes; -1 if
 	* 		provided with bad input
 	*/
-	virtual int partition(int left, int right, int pivotIndex) = 0;
+	int QS::partition(int left, int right, int pivotIndex)
+	{
+		return 0;
+	}
 
 	/*
 	* Produces a comma delimited string representation of the array. For example: if my array
@@ -95,12 +85,19 @@ public:
 	* @return
 	*		the string representation of the current array
 	*/
-	virtual string getArray() const = 0;
+	string QS::getArray() const
+	{
+		string temp;
+		return temp;
+	}
 
 	/*
 	* Returns the number of elements which have been added to the array.
 	*/
-	virtual int getSize() const = 0;
+	int QS::getSize() const
+	{
+		return 0;
+	}
 
 	/*
 	* Adds the given value to the end of the array starting at index 0.
@@ -112,7 +109,10 @@ public:
 	* If the array is filled, do nothing.
 	* returns true if a value was added, false otherwise.
 	*/
-	virtual bool addToArray(int value) = 0;
+	bool QS::addToArray(int value)
+	{
+		return true;
+	}
 
 	/*
 	* Dynamically allocates an array with the given capacity.
@@ -124,13 +124,15 @@ public:
 	* @return
 	*		true if the array was created, false otherwise
 	*/
-	virtual bool createArray(int capacity) = 0;
+	bool QS::createArray(int capacity)
+	{
+		return true;
+	}
 
 	/*
 	* Resets the array to an empty or NULL state.
 	*/
-	virtual void clear() = 0;
-};
-
-#endif /* QSINTERFACE_H_ */
-	
+	void QS::clear()
+	{
+		return;
+	}
